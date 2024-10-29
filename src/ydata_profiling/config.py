@@ -112,6 +112,8 @@ class TimeseriesVars(BaseModel):
     lags: List[int] = [1, 7, 12, 24, 30]
     significance: float = 0.05
     pacf_acf_lag: int = 100
+    autolag: Optional[str] = "AIC"
+    maxlag: Optional[int] = None
 
 
 class Univariate(BaseModel):
